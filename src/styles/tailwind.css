@@ -1,0 +1,42 @@
+@tailwind base;
+
+/* Your own custom base styles */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Your own custom component styles */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+
+
+.label-floating input,
+.label-floating label,
+.label-floating textarea,
+.label-floating select {
+  padding-top: 1.4rem;
+}
+
+.label-floating input:not(:placeholder-shown),
+.label-floating textarea:not(:placeholder-shown) {
+  padding-top: 1.4rem;
+  transition: all 0.2s ease-in-out;
+}
+.label-floating input:not(:placeholder-shown) ~ label,
+.label-floating textarea:not(:placeholder-shown) ~ label,
+.label-floating select ~ label {
+  padding-top: 0.25rem;
+  font-size: 0.8rem;
+  transition: all 0.2s ease-in-out;
+  color: gray;
+}
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
